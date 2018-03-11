@@ -18,15 +18,16 @@ function digitsAverage(input) {
   let arrayOfStringValues = inputString.split('');
   // console.log(arrayOfStringValues);
 
+  let arrayToCheck = '';
   for(let i = 0; i < arrayOfStringValues.length; i++) {
-    let arrayToCheck = '';
     if(arrayOfStringValues[i] && arrayOfStringValues[i + 1]) {
 
       let averageOfFirstTwo = (parseInt(arrayOfStringValues[i]) + parseInt(arrayOfStringValues[i + 1])) / 2;
       arrayToCheck += averageOfFirstTwo;
       console.log('averageOfFirstTwo', averageOfFirstTwo);
       console.log('array To check', arrayToCheck);
-      // digitsAverage(arrayTo);
+      console.log(typeof(arrayToCheck));
+      return digitsAverage(parseInt(arrayToCheck));
     }
   }
 }
