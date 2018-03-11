@@ -11,3 +11,10 @@ const reverseStr = (str) => {
 };
 
 reverseStr('bird');
+
+const usingReverse = (str) => {
+  console.log(str.split('').reverse().join(''));
+  return str.split('').reverse().join('');
+
+};
+usingReverse('dog');
