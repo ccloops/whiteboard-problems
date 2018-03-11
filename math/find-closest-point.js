@@ -11,3 +11,25 @@ let closest = closestPoint(points, location);
 console.log('POINTS: ', points);
 console.log('LOCATION: ', location);
 console.log('CLOSEST: ', closest);
+
+const closestPoint = (points, location) => {
+  let minDistance = distance(points[0], location);
+  let bestIndex = 0;
+
+  points.forEach((point, i) => {
+    let currentDistance = distance(point, location);
+    if(currentDistance < minDistance) {
+      minDistance = currentDistance;
+      bestIndex = i;
+    }
+  });
+
+  return points[bestIndex];
+};
+
+function distance(p1, p2) {
+  let dx = p2.x - p1.x;
+  let dy = p2.y - p1.y;
+  let length = Math.sqrt(dx * dx + dy * dy);
+  return length;
+}
