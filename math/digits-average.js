@@ -14,22 +14,16 @@
 // p.s. for a bigger challenge, check out the one line version of this kata by myjinxin2015!
 
 function digitsAverage(input) {
-  let inputString = input.toString();
-  let arrayOfStringValues = inputString.split('');
-  // console.log(arrayOfStringValues);
+  let arrayOfStrings = ('' + input).split(''); // ['2', '4', '6']
+  console.log(arrayOfStrings);
 
-  let arrayToCheck = '';
-  for(let i = 0; i < arrayOfStringValues.length; i++) {
-    if(arrayOfStringValues[i] && arrayOfStringValues[i + 1]) {
 
-      let averageOfFirstTwo = (parseInt(arrayOfStringValues[i]) + parseInt(arrayOfStringValues[i + 1])) / 2;
-      arrayToCheck += averageOfFirstTwo;
-      console.log('averageOfFirstTwo', averageOfFirstTwo);
-      console.log('array To check', arrayToCheck);
-      console.log(typeof(arrayToCheck));
-      return digitsAverage(parseInt(arrayToCheck));
-    }
-  }
 }
-
 digitsAverage(246);
+
+
+
+
+
+
+
