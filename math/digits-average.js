@@ -14,22 +14,29 @@
 // p.s. for a bigger challenge, check out the one line version of this kata by myjinxin2015!
 
 function digitsAverage(input) {
-  let inputString = input.toString();
-  let arrayOfStringValues = inputString.split('');
-  // console.log(arrayOfStringValues);
-
-  let arrayToCheck = '';
-  for(let i = 0; i < arrayOfStringValues.length; i++) {
-    if(arrayOfStringValues[i] && arrayOfStringValues[i + 1]) {
-
-      let averageOfFirstTwo = (parseInt(arrayOfStringValues[i]) + parseInt(arrayOfStringValues[i + 1])) / 2;
-      arrayToCheck += averageOfFirstTwo;
-      console.log('averageOfFirstTwo', averageOfFirstTwo);
-      console.log('array To check', arrayToCheck);
-      console.log(typeof(arrayToCheck));
-      return digitsAverage(parseInt(arrayToCheck));
-    }
+  let average;
+  let arrayOfStrings = ('' + input).split(''); // ['2', '4', '6']
+  if(arrayOfStrings.length === 1) {
+    average = parseInt(arrayOfStrings[0]);
   }
+  if(arrayOfStrings.length === 2) {
+    let value1 = parseInt(arrayOfStrings[0]);
+    let value2 = parseInt(arrayOfStrings[1]);
+    average = Math.ceil((value1 + value2) / 2);
+  }
+  let parsedArray;
+  if(arrayOfStrings.length > 2) {
+    parsedArray = arrayOfStrings.map(x => parseInt(x));
+    average = Math.ceil(parsedArray.reduce((acc, curr) => (acc + curr) / 2));
+  }
+  console.log(average);
+  return average;
 }
-
 digitsAverage(246);
+
+
+
+
+
+
+
