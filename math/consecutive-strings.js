@@ -3,31 +3,44 @@
 function longestConsec(strarr, k) {
   
   let n = strarr.length;
-  let concatenatedString = '';
   let concatenatedArray = [];
   
   if(n === 0 || k > n || k <= 0) {
     return '';
   }
 
-  let spliced = strarr.splice(0, k);
-  console.log(spliced);
-
-  let newArray = strarr.splice(0, 1, strarr[1]);
-  console.log(newArray);
-  // console.log(strarr);
-
+  let arrayWithAllValues = [];
+  
   for(let i = 0; i < strarr.length; i++) {
-    let arrayPosition = strarr[i];
-    // while (k > 0) {
-    concatenatedString += arrayPosition;
-    arrayPosition = strarr[i + 1];
-    // k--;
-    // }
-    concatenatedArray.push(concatenatedString);
+    arrayWithAllValues.push(strarr[i]);
   }
-  console.log(concatenatedArray);
 
+  let longestString = '';
+  if(k === 1) {
+    for(let i = 0; i < n; i++) {
+      if(longestString.length < strarr[i].length) {
+        longestString = strarr[i];
+      }
+    }
+  } else {
+    
+    
+    for(let i = 0; i < strarr.length; i++) {
+      let spliced = strarr.splice(0, k);
+      let concatSpliced = spliced.join('');
+      concatenatedArray.push(concatSpliced);
+      strarr.unshift(spliced[1]);  
+    }
+    
+    // let longestString = '';
+    for(let i = 0; i < concatenatedArray.length; i++) {
+      if(longestString.length < concatenatedArray[i].length) {
+        longestString = concatenatedArray[i];
+      }
+    }
+  } 
+  console.log('longest string', longestString);
+  return longestString;
 }
 
-longestConsec(['zone', 'abigail', 'theta', 'form', 'libe', 'zas'], 2);
+longestConsec(['it','wkppv','ixoyx', '3452', 'zzzzzzzzzzzz'], 3);
