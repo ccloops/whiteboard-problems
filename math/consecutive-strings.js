@@ -9,12 +9,6 @@ function longestConsec(strarr, k) {
     return '';
   }
 
-  let arrayWithAllValues = [];
-  
-  for(let i = 0; i < strarr.length; i++) {
-    arrayWithAllValues.push(strarr[i]);
-  }
-
   let longestString = '';
   if(k === 1) {
     for(let i = 0; i < n; i++) {
@@ -22,17 +16,20 @@ function longestConsec(strarr, k) {
         longestString = strarr[i];
       }
     }
-  } else {
-    
+  } 
+  
+  else {
     
     for(let i = 0; i < strarr.length; i++) {
       let spliced = strarr.splice(0, k);
+      console.log('spliced', spliced);
       let concatSpliced = spliced.join('');
+      console.log('concatspliced ', concatSpliced);
       concatenatedArray.push(concatSpliced);
-      strarr.unshift(spliced[1]);  
+      console.log(concatenatedArray);
     }
+
     
-    // let longestString = '';
     for(let i = 0; i < concatenatedArray.length; i++) {
       if(longestString.length < concatenatedArray[i].length) {
         longestString = concatenatedArray[i];
