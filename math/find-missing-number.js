@@ -16,3 +16,16 @@ const findMissingNumberMath = (array) => {
 // big O(n) time
 
 findMissingNumberMath();
+
+const test = [...Array(99).keys()].map(x => ++x);
+
+const findNumber = (array) => {
+  const expectedSum = [...Array(100).keys()].map(x => ++ x).reduce((a, c) => a + c);
+
+  const actualSum = array.reduce((a, c) => a + c);
+
+  let missingNumber = expectedSum - actualSum;
+  return missingNumber;
+};
+
+findNumber(test);
