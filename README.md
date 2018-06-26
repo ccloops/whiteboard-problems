@@ -15,3 +15,5 @@
 * `movie theater problem - find number of people blocked`
 * `transpose/rotate a 2d array`
 * Big O
+
+### Math
