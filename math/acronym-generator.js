@@ -8,10 +8,10 @@ function acronynms(str) {
   if (!str) return null;
   let newArray = str.split(' ');
   let output = '';
-  for (let word = 0; word < newArray.length; word++) {
-    if (!wordsIgnore.includes(newArray[word].toLowerCase())) {
-      console.log(newArray[word][0]);
-      output += newArray[word][0];
+  for (let i = 0; i < newArray.length; i++) {
+    if (!wordsIgnore.includes(newArray[i].toLowerCase())) {
+      console.log(newArray[i][0]);
+      output += newArray[i][0];
     }
   }
   console.log(output);
