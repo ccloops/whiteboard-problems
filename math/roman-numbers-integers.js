@@ -17,21 +17,49 @@ function toRoman(num) {
 // toRoman(25);
 
 
-let romanKey = {
-  'M': 1000,
-  'CM': 900,
-  'D': 500,
-  'CD': 400,
-  'C': 100,
-  'XC': 90,
-  'L': 50,
-  'XL': 40,
-  'X': 10,
-  'IX': 9,
-  'V': 5,
-  'IV': 4,
-  'I': 1,
-};
+function romanNumerals(str) {
+
+  let romanKey = {
+    'M': 1000,
+    'CM': 900,
+    'D': 500,
+    'CD': 400,
+    'C': 100,
+    'XC': 90,
+    'L': 50,
+    'XL': 40,
+    'X': 10,
+    'IX': 9,
+    'V': 5,
+    'IV': 4,
+    'I': 1,
+  };
+
+  let output = 0;
+
+  for(let key in romanKey) {
+
+    for(let i = 0; i < str.length; i++) {
+
+      if(str === key) {
+        console.log(romanKey[key]);
+        output += romanKey[key];
+
+      }
+    }
+    // if(romanKey.hasOwnProperty(key)) {
+    //   console.log(key + ' -> ' + romanKey[key]);
+    // }
+  }
+
+  console.log(output);
+
+  return output;
+
+
+}
+
+romanNumerals('LXI');
 
 function fromRoman(str) {
   var result = 0;
@@ -49,18 +77,4 @@ function fromRoman(str) {
   return result;
 }
 
-fromRoman('LIX');
-
-// function romInt(str) {
-
-// }
-
-// var decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-
-// for(let i in decimal) {
-//   console.log('let in ', i);
-// }
-
-// for (let value of decimal) {
-//   console.log('let of ', value);
-// }
+// fromRoman('LIX');
