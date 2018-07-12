@@ -5,39 +5,15 @@
 const compressAString = (str) => {
   
   let compressedString = '';
-  // let current = str[0];
 
   for(let i = 0; i < str.length; i++) {
     let counter = 0;
-    // while(str[i] === str[i + 1]) {
     console.log(str[i]);
     counter++;
     console.log(counter);
-    // }
-    // if(str[i] !== str[i + 1]) {
-    //   compressedString += str[i];
-    // }
-  }
+
 
   console.log(compressedString);
-
-  // for(let i = 1; i < str.length; i++) {
-  //   let counter = 0;
-  //   if(current === str[i]) {
-  //     current = str[i];
-  //     counter++;
-  //   }
-  //   console.log(counter);
-  // }
-
-  // let newObject = {};
-
-  // for(let i = 0; i < str.length; i++) {
-  //   if(newObject[str[i]]) {
-  //     newObject[str[i]] = 1;
-  //   }
-  //   newObject[str[i]] = 1;
-  // } 
 
 };
 
