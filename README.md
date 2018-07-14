@@ -17,3 +17,6 @@
 * Big O
 
 ### Math
+
+* `even fibonacci numbers`
+* `compress a string`

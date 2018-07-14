@@ -8,10 +8,18 @@ const compressAString = (str) => {
 
   for(let i = 0; i < str.length; i++) {
     let counter = 0;
-    console.log(str[i]);
+    // console.log(str[i]);
+    if(str[i] !== str[i + 1] ) {
+      str += str[i];
+    } 
+    // if(str[i] === str[i + 1]) {
     counter++;
-    console.log(counter);
-
+    str += str[i];
+    str += counter;
+    // console.log(counter);
+    // }
+    
+  }
 
   console.log(compressedString);
 
