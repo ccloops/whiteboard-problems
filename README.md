@@ -20,3 +20,7 @@
 
 * `even fibonacci numbers`
 * `compress a string`
+* `find nth digit`
+* `integer reversal`
+* `reverse a string`
+* `zig zag`
