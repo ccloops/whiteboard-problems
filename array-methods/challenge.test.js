@@ -14,14 +14,14 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => arr.sort((a, b) => a > b);
+const alphabetize = (arr) => arr.sort((a, b) => a > b ? 1 : a < b ? -1 : 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortByLength = (arr) => arr.sort((a, b) => a.length > b.length);
+const sortByLength = (arr) => arr.sort((a, b) => a.length > b.length ? 1 : a.length < b.length ? -1 : 0);
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -30,7 +30,9 @@ Write a function named alphabetizeBetter that takes in an array of strings and r
 For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetizeBetter = (arr) => arr.sort((a, b) => a.toLowerCase() > b.toLowerCase());
+const alphabetizeBetter = (arr) => arr.sort((a, b) => {
+  return a.toLowerCase() > b.toLowerCase() ? 1 : a.toLowerCase() < b.toLowerCase() ? -1 : 0;
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -70,7 +72,7 @@ const people = [
   new Person('Stan', 'Seattle', 67),
 ];
 
-const sortPeople = (arr) => arr.sort((a, b) => a.lastName > b.lastName);
+const sortPeople = (arr) => arr.sort((a, b) => a.lastName > b.lastName ? 1 : a.lastName < b.lastName ? -1 : 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
@@ -84,9 +86,9 @@ const sortPeopleBetter = (arr) => {
     if (a.firstName === b.firstName && a.lastName === b.lastName) {
       return a.age - b.age;
     } else if(a.lastName === b.lastName) {
-      return a.firstName > b.firstName;
+      return a.firstName > b.firstName ? 1 : a.firstName < b.firstName ? -1 : 0;
     } else {
-      return a.lastName > b.lastName;
+      return a.lastName > b.lastName ? 1 : a.lastName < b.lastName ? -1 : 0;
     }
   });
 }
@@ -131,7 +133,7 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
+  // arr.sort((a, b) => )
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -291,7 +293,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
