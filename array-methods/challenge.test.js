@@ -133,8 +133,22 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // arr.sort((a, b) => )
+
+  const week = {
+    Monday: 0,
+    Tuesday: 1,
+    Wednesday: 2,
+    Thursday: 3,
+    Friday: 4
+  }
+
+  return arr.sort((a, b) => {
+   return (week[a.dayOfWeek] - week[b.dayOfWeek]) || (a.start > b.start ? 1 : (a.start < b.start ? -1 : 0)) || (a.end > b.end ? 1 : (a.end < b.end ? -1 : 0))
+  });
+  
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
