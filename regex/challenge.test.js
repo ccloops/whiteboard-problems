@@ -27,6 +27,11 @@ const isCapitalized = (str) => {
     if (word.charAt(0).match(/[A-Z]/)) newArray.push(word);
   })
   return newArray;
+
+  // let capitalized = /[A-Z][a-zA-Z]*/g; 
+  // let capitals = str.match(capitalized);
+
+  // return capitals;
 };
 
 /* ------------------------------------------------------------------------------------------------
