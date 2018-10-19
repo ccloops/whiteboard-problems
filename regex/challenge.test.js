@@ -21,7 +21,12 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let arrOfStrings = str.split(' ');
+  let newArray = [];
+  arrOfStrings.forEach(word => {
+    if (word.charAt(0).match(/[A-Z]/)) newArray.push(word);
+  })
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,7 +107,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should only return words that begin with a capital letter', () => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
