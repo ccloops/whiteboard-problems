@@ -71,7 +71,11 @@ let characters = [
 ]
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let characterCount = 0;
+  characters.forEach(character => {
+    characterCount+=1;
+  })
+  return characterCount;
 }
 
 /*------------------------------------------------------------------------------------------------
@@ -152,7 +156,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('something specific', () => {
     expect(totalCharacters(characters)).toStrictEqual(7);
   });
