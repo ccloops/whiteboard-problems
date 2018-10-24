@@ -72,7 +72,7 @@ let characters = [
 
 const totalCharacters = (arr) => {
   let characterCount = 0;
-  characters.forEach(character => {
+  arr.forEach(character => {
     characterCount+=1;
   })
   return characterCount;
@@ -85,7 +85,9 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.forEach(character => {
+    houses.push(character.house);
+  })
   return houses;
 }
 
@@ -99,7 +101,13 @@ hasChildrenValues(characters, 'Eddard') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let result;
+  arr.forEach(char => {
+    if(char.name === character) {
+     result = char.children.length ? true : false;
+    }
+  });
+  return result;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,14 +170,14 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('something specific', () => {
     expect(getHouses(characters)).toStrictEqual(['Stark', 'Arryn', 'Lannister', 'Targaryen', 'Tyrell', 'Stark', 'Snow']);
     expect(getHouses(characters).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenValues(characters, 'Daenarys')).toBeTruthy();
   });
