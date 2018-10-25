@@ -10,9 +10,8 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 const forLoopTwoToThe = (arr) => {
   let results = [];
   for(let number of arr) {
-    results.push(2 ^ number);
+    results.push(Math.pow(2, number));
   }
-  console.log(results);
   return results;
 };
 
