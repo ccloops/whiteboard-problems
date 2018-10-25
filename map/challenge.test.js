@@ -9,9 +9,8 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   let results = [];
-  for(let number of arr) {
+  for(let number of arr) 
     results.push(Math.pow(2, number));
-  }
   return results;
 };
 
@@ -31,9 +30,8 @@ CHALLENGE 3
 Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function from challenge 2, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
-const mapTwoToThe = (arr) => {
-  return arr.map(number => Math.pow(2, number));
-}
+const mapTwoToThe = (arr) => arr.map(number => Math.pow(2, number));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -42,9 +40,7 @@ Read the MDN documentation on String.charCodeAt() if necessary.
 For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
-const charCode = (arr) => {
-  // Solution code here...
-};
+const charCode = (arr) => arr.map(letter => letter.charCodeAt(0));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -54,7 +50,11 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+  return arr.map(item => {
+    if(isNaN(item)) return'N/A';
+    else if (item % 2 === 0) return 'even';
+    else return 'odd';
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -181,14 +181,14 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([67, 111, 100, 101, 51, 48, 49]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return an array containing the keys from an object', () => {
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual(['odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd']);
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541]).length).toStrictEqual(8);
