@@ -133,9 +133,9 @@ Write a function named evenOddNumericValues that, given an array as input, uses 
 For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
 ------------------------------------------------------------------------------------------------ */
 
-const evenOddNumericValues = (arr) => {
-  // Solution code here...
-};
+const evenOddNumericValues = (arr) => 
+  arr.filter(value => typeof value === 'number')
+  .map(value => value % 2 === 0 ? 'even' : 'odd');
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -229,7 +229,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should remove non-integers and return "even" or "odd', () => {
     expect(evenOddNumericValues(['Gregor', 2, 4, 1])).toStrictEqual(['even', 'even', 'odd']);
     expect(evenOddNumericValues(['Gregor', 2, 4, 1]).length).toStrictEqual(3);
