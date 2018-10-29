@@ -10,11 +10,11 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   let counter = 0;
-  input.map(item => console.log(item.map(value => {
+  input.map(item => item.map(value => {
     if(value === target)  {
       counter++;
     }
-  })));
+  }));
   return counter;
 };
 
@@ -26,7 +26,12 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let sum = 0;
+  input.map(item => item.map(value => {
+    sum += value;
+  }));
+  console.log(sum);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,7 +137,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add all the numbers in the arrays', () => {
     const nums = [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6]];
 
