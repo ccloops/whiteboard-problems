@@ -1,0 +1,28 @@
+{
+  "name": "whiteboard-problems",
+  "version": "1.0.0",
+  "description": "whiteboarding challenges and solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccloops/whiteboard-problems.git"
+  },
+  "keywords": [
+    "data",
+    "structures",
+    "and",
+    "algorithms"
+  ],
+  "author": "Catherine Looper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccloops/whiteboard-problems/issues"
+  },
+  "homepage": "https://github.com/ccloops/whiteboard-problems#readme",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
