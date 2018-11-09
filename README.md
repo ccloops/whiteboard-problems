@@ -16,6 +16,9 @@
 * `transpose/rotate a 2d array`
 * Big O
 
+### Regex
+
+
 ### Math
 
 ** Problem Suggestions : Eloquent JavaScript
