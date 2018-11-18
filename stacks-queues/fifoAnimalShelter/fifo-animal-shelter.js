@@ -11,6 +11,10 @@ class AnimalShelter {
     console.log(this);
     return this;
   }
+
+  dequeue(pref) {
+    this.queue.shift();
+  }
 }
 
 module.exports = AnimalShelter;
