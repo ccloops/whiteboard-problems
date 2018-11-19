@@ -1,5 +1,6 @@
 'use strict';
 
+
 class AnimalShelter {
   constructor() {
     this.queue = [];
@@ -12,6 +13,16 @@ class AnimalShelter {
 
   dequeue(pref) {
     let valueToBeReturned;
+
+    if(pref.type === 'cat') {
+      // if(this.queue.includes('cat'));
+      for(let i = valueToBeReturned.length - 1; i > 0; i--) {
+        if(this.queue[i] === 'cat') {
+          console.log(`cat at index ${i}`);
+        }
+      }
+      console.log('cat is included');
+    }
 
     if(pref === 'cat' || pref === 'dog') {
       valueToBeReturned = this.queue.pop();
