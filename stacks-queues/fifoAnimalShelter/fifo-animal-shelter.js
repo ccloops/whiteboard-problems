@@ -6,19 +6,22 @@ class AnimalShelter {
   }
 
   enqueue(animal) {
-    // this.queue[this.queue.length] = animal;
-    this.queue.push(animal);
-    console.log(this);
+    this.queue.unshift(animal);
     return this;
   }
 
   dequeue(pref) {
-    this.queue.shift();
+    let valueToBeReturned;
+
+    if(pref !== 'cat' || pref !== 'dog')
+      valueToBeReturned = null;
+    else {
+      valueToBeReturned = this.queue.pop();
+      console.log('value', valueToBeReturned);
+    }
+    return valueToBeReturned;
   }
+  // get highestPriority() {}
 }
 
 module.exports = AnimalShelter;
-
-let shelter = new AnimalShelter();
-
-shelter.enqueue('dog');
