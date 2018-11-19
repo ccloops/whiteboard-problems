@@ -4,7 +4,7 @@ const Animal = require('../lib/animal.js');
 const AnimalShelter = require('../fifo-animal-shelter.js');
 
 describe('Animal Shelter functionality', () => {
-  it('enqueue(animal) method to add an animal to the queue', () => {
+  xit('enqueue(animal) method to add an animal to the queue', () => {
     let shelter = new AnimalShelter();
     shelter.enqueue(new Animal('dog', 'sport'));
 
@@ -13,20 +13,32 @@ describe('Animal Shelter functionality', () => {
     expect(shelter.queue).toEqual([{'name': 'sport','type': 'dog'}]);
   });
 
-  it('dequeue(pref) method should have FIFO functionality and should remove the first enqueued item', () => {
+  // it('dequeue(pref) method should have FIFO functionality and should remove the first enqueued item', () => {
+  //   let shelter = new AnimalShelter();
+  //   shelter.enqueue(new Animal('dog', 'sport'));
+  //   shelter.enqueue(new Animal('cat', 'mooshy'));
+  //   shelter.enqueue(new Animal('dog', 'mabel'));
+  //   shelter.dequeue('cat');
+  //   expect(shelter.queue).toEqual([{ 'name': 'mabel', 'type': 'dog' }, { 'name': 'mooshy', 'type': 'cat' }]);
+  // });
+
+  // If a cat or dog isn’t preferred, return whichever animal has been waiting in the shelter the longest.
+
+  // dequeue(pref): returns either a dog or a cat. If pref, a string, is ‘cat’ return the longest-waiting cat (or null if none available.) If pref is ‘dog’, return the longest-waiting dog (or null if none available.) For any other preference (including undefined) return null.
+
+  it('dequeue(pref) method should return the longest-waiting cat if the value of pref is cat', () => {
     let shelter = new AnimalShelter();
     shelter.enqueue(new Animal('dog', 'sport'));
     shelter.enqueue(new Animal('cat', 'mooshy'));
     shelter.enqueue(new Animal('dog', 'mabel'));
-    shelter.dequeue('cat');
-    expect(shelter.queue).toEqual([{ 'name': 'mabel', 'type': 'dog' }, { 'name': 'mooshy', 'type': 'cat' }]);
+    expect(shelter.dequeue('cat')).toEqual({ 'type': 'cat', 'name': 'mooshy' });
   });
 
   xit('dequeue(pref) method should return null if pref is not a dog or a cat', () => {
     let shelter = new AnimalShelter();
-    shelter.enqueue('dog');
-    shelter.enqueue('cat');
-    shelter.enqueue('dog');
+    shelter.enqueue(new Animal('dog', 'sport'));
+    shelter.enqueue(new Animal('cat', 'mooshy'));
+    shelter.enqueue(new Animal('dog', 'mabel'));
     shelter.dequeue('floot');
     expect(shelter.dequeue()).toBeNull();
   });
