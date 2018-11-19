@@ -15,7 +15,7 @@ describe('Animal Shelter functionality', () => {
     shelter.enqueue('dog');
     shelter.enqueue('cat');
     shelter.enqueue('dog');
-    shelter.dequeue('cat');
+    shelter.dequeue('dog');
     expect(shelter.queue).toEqual(['dog', 'cat']);
   });
 

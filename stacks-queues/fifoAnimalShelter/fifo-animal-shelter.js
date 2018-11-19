@@ -13,12 +13,16 @@ class AnimalShelter {
   dequeue(pref) {
     let valueToBeReturned;
 
-    if(pref !== 'cat' || pref !== 'dog')
-      valueToBeReturned = null;
-    else {
+    if(pref === 'cat' || pref === 'dog') {
       valueToBeReturned = this.queue.pop();
       console.log('value', valueToBeReturned);
     }
+    else {
+      valueToBeReturned = null;
+      
+      console.log('value', valueToBeReturned);
+    }
+    console.log(valueToBeReturned);
     return valueToBeReturned;
   }
   // get highestPriority() {}
