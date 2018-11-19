@@ -4,7 +4,7 @@ const Animal = require('../lib/animal.js');
 const AnimalShelter = require('../fifo-animal-shelter.js');
 
 describe('Animal Shelter functionality', () => {
-  xit('enqueue(animal) method to add an animal to the queue', () => {
+  it('enqueue(animal) method to add an animal to the queue', () => {
     let shelter = new AnimalShelter();
     shelter.enqueue(new Animal('dog', 'sport'));
 
@@ -29,17 +29,37 @@ describe('Animal Shelter functionality', () => {
   it('dequeue(pref) method should return the longest-waiting cat if the value of pref is cat', () => {
     let shelter = new AnimalShelter();
     shelter.enqueue(new Animal('dog', 'sport'));
+    shelter.enqueue(new Animal('cat', 'lola'));
     shelter.enqueue(new Animal('cat', 'mooshy'));
+    shelter.enqueue(new Animal('cat', 'big kitten'));
     shelter.enqueue(new Animal('dog', 'mabel'));
-    expect(shelter.dequeue('cat')).toEqual({ 'type': 'cat', 'name': 'mooshy' });
+    expect(shelter.dequeue('cat')).toEqual({ 'type': 'cat', 'name': 'lola' });
   });
 
-  xit('dequeue(pref) method should return null if pref is not a dog or a cat', () => {
+  it('dequeue(pref) method should return the longest-waiting dog if the value of pref is dog', () => {
+    let shelter = new AnimalShelter();
+    shelter.enqueue(new Animal('dog', 'sport'));
+    shelter.enqueue(new Animal('cat', 'lola'));
+    shelter.enqueue(new Animal('cat', 'mooshy'));
+    shelter.enqueue(new Animal('cat', 'big kitten'));
+    shelter.enqueue(new Animal('dog', 'mabel'));
+    expect(shelter.dequeue('dog')).toEqual({ 'type': 'dog', 'name': 'sport' });
+  });
+
+  it('dequeue(pref) method should return null if pref is not a dog or a cat', () => {
     let shelter = new AnimalShelter();
     shelter.enqueue(new Animal('dog', 'sport'));
     shelter.enqueue(new Animal('cat', 'mooshy'));
     shelter.enqueue(new Animal('dog', 'mabel'));
     shelter.dequeue('floot');
     expect(shelter.dequeue()).toBeNull();
+  });
+
+  it('dequeue(pref) method should return null if pref is a cat, but the queue does not contain any cats', () => {
+    let shelter = new AnimalShelter();
+    shelter.enqueue(new Animal('dog', 'sport'));
+    shelter.enqueue(new Animal('dog', 'mabel'));
+    shelter.enqueue(new Animal('dog', 'summer'));
+    expect(shelter.dequeue('cat')).toBeNull();
   });
 });
