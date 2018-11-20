@@ -76,4 +76,13 @@ describe('LinkedList class methods', () => {
     expect(list.intersect(ll1, ll2).head.value.value).toEqual(3);
     expect(list.intersect(ll1, ll2).head.next.value.value).toEqual(4);
   });
+
+  it('findMiddle(list) method should return the middle value in a Linked List', () => {
+    let list = new LinkedList();
+    list.append(3);
+    list.append(4);
+    list.append(5);
+
+    expect(list.findMiddle(list)).toEqual(4);
+  });
 });
