@@ -1,12 +1,30 @@
 # Whiteboard Problems && Interview Questions
 
-## Including:
+## Table of Contents
+
+### Data Structures
+
+* [Linked Lists](#linked-lists)
+* [Stacks & Queues](#stacks-queues)
 
 ### Linked Lists
-* `traverse a linked list`
-* `intersect a linked list`
-* `find middle of a linked list`
-* Big O 
+<a id="linked-lists"></a>
+* Linked List methods:
+  * `append(value)`
+  * `prepend(value)`
+* Challenges:
+  * `traverse a linked list`
+  * `intersect a linked list`
+  * `find middle of a linked list`
+
+
+### Stacks && Queues
+<a id="stacks-queues"></a>
+* Stack Methods:
+  * `push(value)`
+  * `pop()`
+
+
 ### Binary Search Trees
 * `validate a BST`
 * `implement insert and find BST methods`
