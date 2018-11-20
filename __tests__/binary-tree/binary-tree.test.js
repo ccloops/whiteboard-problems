@@ -32,4 +32,8 @@ describe('BinaryTree class methods', () => {
   it('inOrderTraversal() method should return an array of node values traversed in-order', () => {
     expect(tree.inOrderTraversal(tree.root)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
+
+  it('postOrderTraversal() method should return an array of node values traversed post-order', () => {
+    expect(tree.postOrderTraversal(tree.root)).toEqual([1, 3, 5, 4, 2, 8, 9, 7, 6]);
+  });
 });
