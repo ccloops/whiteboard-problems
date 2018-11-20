@@ -60,4 +60,20 @@ describe('LinkedList class methods', () => {
     expect(list.head.next.next.next.value).toEqual(1);
     expect(list.head.next.next.next.next).toBeNull(); 
   });
+
+  it('intersect(ll1, ll2) should intersect a linked list', () => {
+    let list = new LinkedList();
+    let ll1 = new LinkedList();
+    let ll2 = new LinkedList();
+    ll1.append(3);
+    ll1.append(4);
+    ll1.append(5);
+
+    ll2.append(3);
+    ll2.append(4);
+    ll2.append(6);
+
+    expect(list.intersect(ll1, ll2).head.value.value).toEqual(3);
+    expect(list.intersect(ll1, ll2).head.next.value.value).toEqual(4);
+  });
 });

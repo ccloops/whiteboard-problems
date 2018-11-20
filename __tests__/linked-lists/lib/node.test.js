@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('../../../lib/data-structures/linked-lists/singly/node.js');
+const Node = require('../../../lib/data-structures/linked-lists/singly/lib/node.js');
 
 describe('Linked List Node Class', () => {
 
