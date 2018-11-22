@@ -12,6 +12,9 @@
 * Linked List methods:
   * `append(value)`
   * `prepend(value)`
+  * `reverse()`
+  * `remove(value)`
+  * `intersect(ll1, ll2)`
 * Challenges:
   * `traverse a linked list`
   * `intersect a linked list`
