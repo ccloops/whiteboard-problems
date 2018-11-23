@@ -28,6 +28,12 @@
   * `pop()`
 
 
+### Binary Tree 
+  * `preOrderTraversal()`
+  * `inOrderTraversal()`
+  * `postOrderTraversal()`
+
+
 ### Binary Search Trees
 * `validate a BST`
 * `implement insert and find BST methods`
