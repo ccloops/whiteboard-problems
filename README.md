@@ -6,6 +6,8 @@
 
 * [Linked Lists](#linked-lists)
 * [Stacks & Queues](#stacks-queues)
+* [Binary Trees](#binary-tree)
+* [Binary Search Trees](#binary-search-trees)
 
 ### Linked Lists
 <a id="linked-lists"></a>
@@ -29,12 +31,14 @@
 
 
 ### Binary Tree 
+<a id="binary-tree"></a>
   * `preOrderTraversal()`
   * `inOrderTraversal()`
   * `postOrderTraversal()`
 
 
 ### Binary Search Trees
+<a id="binary-search-trees"></a>
 * `validate a BST`
 * `implement insert and find BST methods`
 * Big O
