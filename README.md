@@ -8,6 +8,7 @@
 * [Stacks & Queues](#stacks-queues)
 * [Binary Trees](#binary-tree)
 * [Binary Search Trees](#binary-search-trees)
+* [Regex](#regex)
 
 ### Linked Lists
 <a id="linked-lists"></a>
@@ -48,7 +49,7 @@
 * Big O
 
 ### Regex
-
+<a id="regex"></a>
 
 ### Math
 
