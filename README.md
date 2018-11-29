@@ -9,7 +9,7 @@
 * [Binary Trees](#binary-tree)
 * [Binary Search Trees](#binary-search-trees)
 * [Regex](#regex)
-* [Math Challenges]
+* [Math Challenges](#math-challenges)
 
 ### Linked Lists
 <a id="linked-lists"></a>
@@ -53,6 +53,7 @@
 <a id="regex"></a>
 
 ### Math
+<a id="math-challenges"></a>
 
 ** Problem Suggestions : Eloquent JavaScript
 
