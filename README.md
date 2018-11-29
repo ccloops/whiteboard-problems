@@ -9,6 +9,7 @@
 * [Binary Trees](#binary-tree)
 * [Binary Search Trees](#binary-search-trees)
 * [Regex](#regex)
+* [Math Challenges]
 
 ### Linked Lists
 <a id="linked-lists"></a>
