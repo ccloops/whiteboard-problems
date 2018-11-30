@@ -1,5 +1,7 @@
 # Whiteboard Problems && Interview Questions
 
+[![Build Status](https://travis-ci.org/ccloops/whiteboard-problems.svg?branch=master)](https://travis-ci.org/ccloops/whiteboard-problems)
+
 ## Table of Contents
 
 ### Data Structures
@@ -23,7 +25,6 @@
   * `traverse a linked list`
   * `intersect a linked list`
   * `find middle of a linked list`
-
 
 ### Stacks && Queues
 <a id="stacks-queues"></a>
