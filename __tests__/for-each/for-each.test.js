@@ -1,3 +1,5 @@
+'use strict';
+
 const ForEach = require('../../lib/interview-questions/for-each/for-each.js');
 
 describe('Testing challenge 1', () => {
