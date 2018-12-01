@@ -4,7 +4,8 @@
   "description": "whiteboarding challenges and solution",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage", 
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/ccloops/whiteboard-problems#readme",
   "dependencies": {
+    "eslint": "^5.9.0",
     "jest": "^23.6.0"
   }
 }
