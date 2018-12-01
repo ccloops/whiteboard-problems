@@ -1,7 +1,7 @@
 'use strict';
 
-const Animal = require('../../stacks-queues/fifoAnimalShelter/lib/animal.js');
-const AnimalShelter = require('../../stacks-queues/fifoAnimalShelter/fifo-animal-shelter.js');
+const Animal = require('../../lib/data-structures/stacks-queues/fifoAnimalShelter/lib/animal.js');
+const AnimalShelter = require('../../lib/data-structures/stacks-queues/fifoAnimalShelter/fifo-animal-shelter.js');
 
 describe('Animal Shelter functionality', () => {
   it('enqueue(animal) method to add an animal to the queue', () => {
