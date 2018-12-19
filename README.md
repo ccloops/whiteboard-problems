@@ -75,5 +75,3 @@
 
 
 ### Challenges
-
-Yayyy
