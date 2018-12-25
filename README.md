@@ -65,12 +65,6 @@
 * `reverse a string`
 * `zig zag`
 
-### Filter
 
-### Map
-
-### Reduce
-
-### Sort
 
 
