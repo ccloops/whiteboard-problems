@@ -53,7 +53,7 @@
 ### Regex
 <a id="regex"></a>
 
-### Math
+### Math Challenges
 <a id="math-challenges"></a>
 
 ** Problem Suggestions : Eloquent JavaScript
