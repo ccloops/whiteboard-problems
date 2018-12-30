@@ -44,11 +44,9 @@
 <a id="binary-search-trees"></a>
 * `validate a BST`
 * `implement insert and find BST methods`
-* Big O
 ###  2d Arrays
 * `movie theater problem - find number of people blocked`
 * `transpose/rotate a 2d array`
-* Big O
 
 ### Regex
 <a id="regex"></a>
