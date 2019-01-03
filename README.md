@@ -1,5 +1,3 @@
-# Whiteboard Problems && Interview Questions
-
 [![Build Status](https://travis-ci.org/ccloops/whiteboard-problems.svg?branch=master)](https://travis-ci.org/ccloops/whiteboard-problems)
 
 ## Table of Contents
@@ -65,4 +63,4 @@
 
 
 
-
+## Other
