@@ -60,7 +60,3 @@
 * `integer reversal`
 * `reverse a string`
 * `zig zag`
-
-
-
-## Other
